@@ -1,0 +1,8 @@
+
+<h1>Home page!</h1>
+<% if service_provider_signed_in? %> 
+ <div> Welcome <%= current_service_provider.email %> </div> 
+   <%= button_to "Sign out", destroy_service_provider_session_path, method: :delete %>
+<% else %>
+  <%= button_to "Sign in", new_service_provider_session_path %> 
+<% end %>
