@@ -3,4 +3,8 @@ class ServiceProvider < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+         has_many :addresses, as: :addressable
+         belongs_to :customer
+         has_many :contactbook
 end
