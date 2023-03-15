@@ -1,0 +1,15 @@
+
+
+<table border>
+<% @customer.each do |cust| %>
+  <tr>
+    <td><%= link_to cust.first_name, customer_path(cust) %></td>
+    <td><%= link_to cust.last_name, customer_path(cust) %></td>
+    <td><%= button_to "Edit",edit_customer_path(cust) %></td>
+    <td><%= button_to "Destroy", customer_path(cust),
+            method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+<%= link_to "Add new Customer", new_customer_path %>
+
+</table>

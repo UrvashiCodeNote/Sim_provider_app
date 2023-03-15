@@ -6,5 +6,5 @@ class ServiceProvider < ApplicationRecord
 
          has_many :addresses, as: :addressable
          belongs_to :customer
-         has_many :contactbook
+         has_many :contactbooks
 end
